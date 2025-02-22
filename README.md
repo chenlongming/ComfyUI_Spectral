@@ -5,7 +5,7 @@ mainly used for visual processing of spectral files
 
 ## Install
 
-You can choose to use [ComfyUI Manager's](https://github.com/ltdrdata/ComfyUI-Manager) `install via Git URL` 
+You can choose to install it using [ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager)
 
 Or manual installation:
 
@@ -22,9 +22,17 @@ Or manual installation:
 
 ## Workflow
 
+### Load & Preview
+
 ![example_01](./images/preview.png)
 
 download workflow: [example_01](./workflows/example_01.json)
+
+### K-Means
+
+![example_02](./images/example_02.png)
+
+download workflow: [example_01](./workflows/example_02.json)
 
 ## Nodes
 
@@ -34,9 +42,10 @@ download workflow: [example_01](./workflows/example_01.json)
 
 ## WIP
 
-- plot nodes
-- k-means node
+- ~~plot node~~
+- ~~k-means node~~
+- ~~calculate nodes~~
 - pca node
-- calculate nodes
 - save node
 - preprocess nodes
+- improve performance

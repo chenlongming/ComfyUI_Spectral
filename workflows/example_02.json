@@ -1,0 +1,370 @@
+{
+  "last_node_id": 78,
+  "last_link_id": 107,
+  "nodes": [
+    {
+      "id": 74,
+      "type": "Plot",
+      "pos": [
+        2291.51025390625,
+        464.1865539550781
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "SPE",
+          "link": 105
+        },
+        {
+          "name": "series",
+          "type": "NDARRAY",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            101
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Plot"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 72,
+      "type": "PreviewImage",
+      "pos": [
+        2302.972900390625,
+        691.6800537109375
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 98
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 75,
+      "type": "PreviewImage",
+      "pos": [
+        2545.860107421875,
+        690.73486328125
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 101
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 71,
+      "type": "KMeans",
+      "pos": [
+        1631.135986328125,
+        302.8072204589844
+      ],
+      "size": [
+        315,
+        122
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "SPE",
+          "link": 106
+        }
+      ],
+      "outputs": [
+        {
+          "name": "classes mask",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "preview",
+          "type": "IMAGE",
+          "links": [
+            98
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "clusters",
+          "type": "NDARRAY",
+          "links": [
+            99
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KMeans"
+      },
+      "widgets_values": [
+        10,
+        20
+      ]
+    },
+    {
+      "id": 77,
+      "type": "PreviewImage",
+      "pos": [
+        2047.568603515625,
+        698.9441528320312
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 107
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 78,
+      "type": "LoadSpectral",
+      "pos": [
+        1102.2266845703125,
+        346.21429443359375
+      ],
+      "size": [
+        315,
+        78
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "preview",
+          "type": "IMAGE",
+          "links": [
+            107
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "spectral",
+          "type": "SPE",
+          "links": [
+            104,
+            105,
+            106
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadSpectral"
+      },
+      "widgets_values": [
+        "D:\\Downloads\\92AV3C.lan"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "LoadEnvi",
+      "pos": [
+        1072.444091796875,
+        844.5189819335938
+      ],
+      "size": [
+        315,
+        102
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "preview",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "spectral",
+          "type": "SPE",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadEnvi"
+      },
+      "widgets_values": [
+        "G:\\BaiduNetdiskDownload\\fz\\HS-氨纶.hdr",
+        "*.spe"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "easy showAnything",
+      "pos": [
+        1456.8948974609375,
+        567.2132568359375
+      ],
+      "size": [
+        305.39276123046875,
+        139.76194763183594
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 104,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "\tData Source:   'D:\\Downloads\\92AV3C.lan'\n\t# Rows:            145\n\t# Samples:         145\n\t# Bands:           220\n\tInterleave:        BIL\n\tQuantization:  16 bits\n\tData format:     int16"
+      ]
+    }
+  ],
+  "links": [
+    [
+      98,
+      71,
+      1,
+      72,
+      0,
+      "IMAGE"
+    ],
+    [
+      99,
+      71,
+      2,
+      74,
+      1,
+      "NDARRAY"
+    ],
+    [
+      101,
+      74,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      104,
+      78,
+      1,
+      45,
+      0,
+      "*"
+    ],
+    [
+      105,
+      78,
+      1,
+      74,
+      0,
+      "SPE"
+    ],
+    [
+      106,
+      78,
+      1,
+      71,
+      0,
+      "SPE"
+    ],
+    [
+      107,
+      78,
+      0,
+      77,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0989681808956955,
+      "offset": [
+        -778.5414225260415,
+        -56.41687389928052
+      ]
+    },
+    "node_versions": {
+      "ComfyUI_Spectral": "b02a85adad7505495f2eca595d2369e31d7780ad",
+      "comfy-core": "v0.3.10-37-gd055325",
+      "comfyui-easy-use": "1.2.6"
+    }
+  },
+  "version": 0.4
+}
