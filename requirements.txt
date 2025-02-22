@@ -1,4 +1,7 @@
 numpy
 pillow
 spectral
+torch
 torchvision
+matplotlib
+tqdm
