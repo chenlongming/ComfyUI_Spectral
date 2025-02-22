@@ -1,15 +1,17 @@
 import os
+from spectral.io import envi
 import spectral as sp
 from PIL import Image
 from torchvision.transforms import ToTensor
 
 
-class LoadSpectral:
+class LoadEnvi:
 
     @classmethod
     def INPUT_TYPES(cls):
         return {
             'required': {
+                'header_file': ('STRING',),
                 'image_file': ('STRING',)
             }
         }
@@ -22,8 +24,11 @@ class LoadSpectral:
 
     preprocess = ToTensor()
 
-    def load_spectral(self, image_file: str):
-        img = sp.open_image(image_file)
+    def load_spectral(self, header_file: str, image_file: str):
+        if image_file.startswith('*.'):
+            image_file = os.path.splitext(header_file)[0] + image_file[1:]
+
+        img = envi.open(header_file, image_file)
         os.makedirs('temp', exist_ok=True)
         fp = os.path.join('temp', 'spectral_preview.png')
         sp.save_rgb(fp, img)

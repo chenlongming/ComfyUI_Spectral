@@ -11,8 +11,14 @@ mainly used for visual processing of spectral files
 ## Nodes
 
 `Spectral Loader`: load spectral file, output `Spectral` object and preview image
+`ENVI Loader`: load imagery with associated ENVI header files and reading & writing spectral libraries with ENVI headers. 
 
 
 ## WIP
 
-Will be later...
+- plot nodes
+- k-means node
+- pca node
+- calculate nodes
+- save node
+- preprocess nodes
