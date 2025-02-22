@@ -1,15 +1,15 @@
 [project]
 name = "spectral"
 description = "ComfyUI Spectral is a ComfyUI custom nodes library based on the spectral, mainly used for visual processing of spectral files"
-version = "1.0.0"
+version = "1.0.1"
 license = {file = "LICENSE"}
-dependencies = ["numpy", "pillow", "spectral", "torchvision"]
+dependencies = ["numpy", "pillow", "spectral", "torch", "torchvision", "matplotlib", "tqdm"]
 
 [project.urls]
 Repository = "https://github.com/chenlongming/ComfyUI_Spectral"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "ghost94"
 DisplayName = "ComfyUI_Spectral"
 Icon = ""
