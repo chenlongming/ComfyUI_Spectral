@@ -8,10 +8,16 @@ mainly used for visual processing of spectral files
 **_This repository is in the early stages of development, the functionality is not complete and may change in the future_**
 
 
+## workflow
+
+![example_01](./images/preview.png)
+
+download workflow: [example_01](./images/preview.png)
+
 ## Nodes
 
-`Spectral Loader`: load spectral file, output `Spectral` object and preview image
-`ENVI Loader`: load imagery with associated ENVI header files and reading & writing spectral libraries with ENVI headers. 
+- `Spectral Loader`: load spectral file, output `Spectral` object and preview image
+- `ENVI Loader`: load imagery with associated ENVI header files and reading & writing spectral libraries with ENVI headers. 
 
 
 ## WIP

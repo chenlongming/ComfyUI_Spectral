@@ -1,26 +1,63 @@
 {
-  "last_node_id": 13,
-  "last_link_id": 15,
+  "last_node_id": 27,
+  "last_link_id": 35,
   "nodes": [
     {
-      "id": 2,
-      "type": "PreviewImage",
+      "id": 25,
+      "type": "LoadSpectral",
       "pos": [
-        1155.0965576171875,
-        760.56298828125
+        989.2482299804688,
+        517.3074951171875
       ],
       "size": [
-        322.2869567871094,
-        206.60107421875
+        315,
+        78
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "preview",
+          "type": "IMAGE",
+          "links": [
+            34
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "spectral",
+          "type": "SPE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadSpectral"
+      },
+      "widgets_values": [
+        "D:\\Downloads\\92AV3C.lan"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "PreviewImage",
+      "pos": [
+        1438.3536376953125,
+        800.9857788085938
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 1
+          "link": 35
         }
       ],
       "outputs": [],
@@ -30,50 +67,85 @@
       "widgets_values": []
     },
     {
-      "id": 1,
-      "type": "LoadSpectral",
+      "id": 26,
+      "type": "PreviewImage",
       "pos": [
-        733.36279296875,
-        759.806884765625
+        1444.431640625,
+        517.6092529296875
       ],
       "size": [
-        315,
-        102
+        140,
+        167.20213317871094
       ],
       "flags": {},
-      "order": 0,
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 24,
+      "type": "LoadEnvi",
+      "pos": [
+        992.7139282226562,
+        660.1664428710938
+      ],
+      "size": [
+        306.94110107421875,
+        123.49032592773438
+      ],
+      "flags": {},
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
-          "name": "PREVIEW",
+          "name": "preview",
           "type": "IMAGE",
           "links": [
-            1
+            35
           ],
           "slot_index": 0
         },
         {
-          "name": "ComfyUI_Spectral",
+          "name": "spectral",
           "type": "SPE",
           "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadSpectral"
+        "Node name for S&R": "LoadEnvi"
       },
       "widgets_values": [
-        "G:\\datasets\\p\\D21__17A\\capture\\D21__17A.hdr",
-        "G:\\datasets\\p\\D21__17A\\capture\\D21__17A.raw"
+        "G:\\Download\\fz\\HS-氨纶.hdr",
+        "*.spe"
       ]
     }
   ],
   "links": [
     [
-      1,
-      1,
+      34,
+      25,
       0,
-      2,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      35,
+      24,
+      0,
+      27,
       0,
       "IMAGE"
     ]
@@ -82,15 +154,15 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.01525597994771,
+      "scale": 1.015255979947718,
       "offset": [
-        -330.8851045247528,
-        -527.6288673232067
+        -773.1024415257135,
+        -353.96797611594025
       ]
     },
     "node_versions": {
-      "comfy-core": "v0.3.10-37-gd055325",
-      "ComfyUI_Spectral": "unknown"
+      "ComfyUI_Spectral": "aa95957d7f98967f1a521b6155907ce28f619559",
+      "comfy-core": "v0.3.10-37-gd055325"
     }
   },
   "version": 0.4
